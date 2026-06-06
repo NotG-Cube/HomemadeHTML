@@ -1,0 +1,60 @@
+<h1>Формы</h1>
+<h2>Элементы диалога</h2>
+<form action="#">
+    <details>
+        <summary>
+            Элементы INPUT
+        </summary>
+        <br>
+        <label>Текстовое поле</label>
+        <input id="textField" type="text" name="text"><br><br>
+
+        <label>Поле для ввода пароля</label>
+        <input id="passField" type="password" name="password"><br><br>
+
+        <label>Флажки</label><br>
+        <label><input type="checkbox"> </label>
+        <label><input type="checkbox"> </label>
+        <label><input type="checkbox"> </label><br><br>
+
+        <label>Переключатели</label><br>
+        <label><input type="radio" name="radiobtn"> </label>
+        <label><input type="radio" name="radiobtn"> </label>
+        <label><input type="radio" name="radiobtn"> </label><br><br>
+
+        <label>Поле для файлов</label><br>
+        <input type="file" name="fileupload"><br><br>
+
+        <label>Кнопка подтверждения</label><br>
+        <input type="submit" value="Отправить форму"><br><br>
+
+        <label>Кнопка с изображением</label><br>
+        <input type="image" src="knopka.gif" alt="Кнопка с изображением"><br><br>
+
+        <label>Кнопка очистки формы</label>
+        <input type="reset" value="Очистить всё">
+    </details>
+    <details>
+        <summary>Элемент SELECT</summary>
+        <select name="select1">
+            <option value="1">Первый</option>
+            <option value="2">второй</option>
+            <option value="3">третий</option>
+            <option value="4">четвертый</option>
+            <option value="5">пятый</option>
+        </select><br><br>
+        <label>Множественный выбор (CTRL)</label><br>
+        <select name="select2" multiple="" size="3">
+            <option value="1">Первый</option>
+            <option value="2">второй</option>
+            <option value="3">третий</option>
+            <option value="4">четвертый</option>
+            <option value="5">пятый</option>
+        </select>
+    </details>
+    <details>
+        <summary>Элемент TEXTAREA</summary>
+        <textarea name="comment" style="width: 400px; height: 100px; resize: none; overflow: auto;"
+            placeholder="Введите текст здесь..."></textarea>
+    </details>
+</form>

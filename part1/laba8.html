@@ -1,0 +1,107 @@
+<h1 align="center">Таблицы</h1>
+<h2>Простая таблица 2×3</h2>
+<table border="1" cellpadding="8" cellspacing="2">
+    <tbody>
+        <tr>
+            <th style="background-color: rgb(161, 23, 23);">Заголовок 1</th>
+            <th style="background-color: rgb(161, 23, 23);">Заголовок 2</th>
+        </tr>
+        <tr>
+            <td>ячейка 1</td>
+            <td>ячейка 2</td>
+        </tr>
+        <tr>
+            <td>ячейка 3</td>
+            <td>ячейка 4</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>В таблице много заголовков</h2>
+<table border="1" cellpadding="8" cellspacing="2">
+    <tbody>
+        <tr>
+            <td style="background-color: rgb(219, 60, 20);"></td>
+            <th style="background-color: rgb(219, 60, 20);">Заголовок 1</th>
+            <th style="background-color: rgb(219, 60, 20);">Заголовок 2</th>
+        </tr>
+        <tr>
+            <th style="background-color: rgb(219, 60, 20);">заголовок 3</th>
+            <td>ячейка 1</td>
+            <td>ячейка 2</td>
+        </tr>
+        <tr>
+            <th style="background-color: rgb(219, 60, 20);">заголовок 4</th>
+            <td>ячейка 3</td>
+            <td>ячейка 4</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Форматирование ячеек-заголовков</h2>
+<table border="1">
+    <tbody>
+        <tr>
+            <th width="200" style="background-color: rgb(231, 127, 8);">Заголовок А</th>
+            <th width="500" style="background-color: rgb(231, 127, 8);">Заголовок Б (шире А)</th>
+        </tr>
+        <tr>
+            <td>ячейка 1</td>
+            <td>ячейка 2</td>
+        </tr>
+        <tr>
+            <td>ячейка 3</td>
+            <td>ячейка 4</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Объединение ячеек</h2>
+<table border="1">
+    <tbody>
+        <tr>
+            <th width="200" style="background-color: rgb(241, 187, 7);">Заголовок 1</th>
+            <th width="200" style="background-color: rgb(241, 187, 7);">Заголовок 2</th>
+        </tr>
+        <tr>
+            <td rowspan="3" class="allCells" style="background-color: rgb(237, 241, 7);">Ячейка 1</td>
+            <td>Ячейка 2</td>
+        </tr>
+        <tr>
+            <td>Ячейка 3</td>
+        </tr>
+        <tr>
+            <td>Ячейка 4</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="footerAllCells" style="background-color: rgb(140, 241, 7);">Ячейка 5 </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Вложенная таблица</h2>
+<table border="5" cellpadding="8px" style="background-color:rgb(101, 241, 7); border-color: antiquewhite;">
+    <tbody>
+        <tr>
+            <td>Таблица 1</td>
+            <td width="300">
+                <table border="5" cellpadding="8px" style="background-color:rgb(7, 241, 171); border-color: antiquewhite;">
+                    <tbody>
+                        <tr class="secondInFirstTable">
+                            <td>Таблица2</td>
+                            <td>Ячейка 2-2</td>
+                        </tr>
+                        <tr class="secondInFirstTable">
+                            <td>Ячейка 3-2</td>
+                            <td>Ячейка 4-2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>Ячейка 3-1</td>
+            <td>Ячейка 4-1</td>
+        </tr>
+    </tbody>
+</table>
