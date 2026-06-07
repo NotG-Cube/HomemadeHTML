@@ -1,0 +1,91 @@
+html, body {
+    font-family:'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffd000;
+}
+
+main {
+    margin-left: 3%;
+}
+
+header, footer {
+    background: #a50909;
+    color: #ffd000;
+    padding: 24px 40px;
+    width: 100%;
+}
+
+header {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.8;
+    box-sizing: border-box;
+}
+
+footer p {
+    margin: 0;
+}
+
+hr {
+    border: 5px;
+    border-top: 1px solid #ffd000;
+    margin: 24px 0;
+}
+
+.card, .list {
+    border-radius: 100%;
+    padding: 16px 24px;
+    margin-bottom: 10px;
+}
+
+.list {
+    padding-left: 40px;
+    line-height: 2;
+}
+
+.link {
+    color: #00e1ff;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 0 20px;
+}
+
+.button {
+    background: #c20000;
+    color: #ffd000;
+    border-style: ridge;
+    border-width: 5px;
+    border-color: #702000;
+    
+    padding: 15px 30px;
+    border-radius: 10%;
+}
+
+.zagolovki {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 12px;
+    margin-bottom: 0px;
+}
+.zagolovkiSmall {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.qaList {
+    padding: 0;
+}
+
+.qaList > li {
+    margin-bottom: 16px;
+}
+
