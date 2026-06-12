@@ -1,0 +1,161 @@
+html, body {
+    font-family:'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffd000;
+    background-color: black;
+}
+
+main {
+    margin-left: 3%;
+}
+
+header, footer {
+    background: #a50909;
+    color: #ffd000;
+    padding: 24px 40px;
+    width: 100%;
+}
+
+header {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.8;
+    box-sizing: border-box;
+}
+
+footer p {
+    margin: 0;
+}
+
+hr {
+    border: 5px;
+    border-top: 1px solid #ffd000;
+    margin: 24px 0;
+}
+
+.card, .list {
+    border-radius: 100%;
+    padding: 16px 24px;
+    margin-bottom: 10px;
+}
+
+.list {
+    padding-left: 40px;
+    line-height: 2;
+}
+
+.link {
+    color: #d41313;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 0 20px;
+}
+
+.button {
+    background: #c20000;
+    color: #ffd000;
+    border-style: ridge;
+    border-width: 5px;
+    border-color: #702000;
+    
+    padding: 15px 30px;
+    border-radius: 10%;
+}
+
+.nameText {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 12px;
+    margin-bottom: 0px;
+    color: #ffd000;
+}
+.profText {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 12px;
+    margin-bottom: 0px;
+    color: #c0a50f;
+}
+.Title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.qaList {
+    padding: 0;
+}
+
+.qaList > li {
+    margin-bottom: 16px;
+}
+
+.photo
+{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    
+
+    border-style: groove;
+    border-color: #ffd000;
+    border-width: 10px;
+    object-fit: cover;
+}
+
+.resumeBlock {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 0 8px;
+}
+
+.sectionTitle{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.list{
+    margin-top: 0px;
+}
+
+.tableCaption {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-align: left;
+    padding-bottom: 8px;
+    color: #c0a50f;
+}
+
+.expGrid {
+    display: grid;
+    grid-template-columns: auto auto auto 1fr auto;
+    border-top: 5px solid #4d0606;
+    border-left: 5px solid #4d0606;
+    border-bottom: 5px solid #4d0606; 
+    border-right: 5px solid #4d0606; 
+}
+.gridHeader {
+    background: #702000;
+    color: #ffd000;
+    padding: 10px 16px;
+    text-align: left;
+    letter-spacing: 0.5px;
+    border-right: 3px solid #4d0606;
+    border-bottom: 3px solid #4d0606;
+}
+.gridCell {
+    padding: 10px 16px;
+    border-right: 3px solid #4d0606;
+    border-bottom: 3px solid #4d0606;
+}

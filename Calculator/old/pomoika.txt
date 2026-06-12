@@ -1,0 +1,75 @@
+     calcTable.addEventListener("click", function(event)
+    {
+        let text = event.target.textContent.trim();
+        if(text ==="0") {display.value ="";}
+        
+        if ("0123456789".includes(text)) { pressDigit(text);} 
+        if (text === "=") { handleEqualsSafe(); }
+        else if (text === "C") { display.value = ""; }
+        else if (text === "CE") {display.value = "0"; }
+        else if (text === "Backspace")
+        {
+            display.value = display.value.slice(0, -1) || "0";
+        }
+    
+    })
+ 
+
+ if ("0123456789".includes(text)) { pressDigit(text);} 
+        else if ("+-".includes(text)) { pressOperator(text); }
+        else if (text === "*" || text === "×") { pressOperator("*"); }
+        else if (text === "/" || text === "÷") { pressOperator("/"); }
+        
+
+          function pressDigit(digit) 
+    {
+        if (display.value === "0") { display.value = digit; } 
+        else { display.value += digit;}
+    }
+
+     function pressOperator(op) { display.value += " " + op + " ";  }
+
+
+     
+    function pressEquals() 
+    {
+        try 
+        {
+            let expression = display.value;
+            let result = eval(expression);
+            
+            display.value = result;
+        } 
+        catch (e) { display.value = "Ошибка"; }
+    }
+
+
+ calcTable.addEventListener("click", function(event)
+    {
+        let text = event.target.textContent.trim();
+        if(text ==="0") {display.value ="";}
+        
+        if (text === "=") { handleEqualsSafe(); }
+        else if (text === "C") { display.value = ""; }
+        else if (text === "CE") {display.value = "0"; }
+        else if (text === "Backspace")
+        {
+            display.value = display.value.slice(0, -1) || "0";
+        }
+    
+    })
+ function handleEqualsSafe() 
+    {
+        if (!/^[\d+\-*\/.()\ ]+$/.test(expression)) 
+        {
+            display = "Ошибка: недопустимые символы";
+            return;
+        }
+  
+        try {
+            let fn = new Function(`"use strict"; return (${expression});`);
+            let result = fn();
+            display = String(result);
+        } 
+        catch (e) {display = "Ошибка";}
+    }

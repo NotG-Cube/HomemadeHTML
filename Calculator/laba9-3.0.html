@@ -1,0 +1,100 @@
+<head>
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<h1 align="center">Калькулятор</h1>
+<table border="1" cellpadding="6" cellspacing="1" align="center" style="background-color: white; user-select: none;">
+    <tbody>
+        <tr>
+            <th width="400">Вид</th>
+            <th width="300">Кнопки</th>
+        </tr>
+
+        <tr>
+           
+            <td valign="bottom" align="center">
+                <table border="2" width="100%" height="300" id="calcTable">
+                     <tbody>
+                        <tr>
+                            <td colspan="6">
+                                <input type="text" id="display" value="0" class="dis" readonly>
+                            </td>
+                        </tr>
+                        <tr align="center">
+                            <td class="cells"> <button class="buttons" disabled></button></td>
+                            <td colspan="3" class="biggerCells"><button class="buttons">Backspace</button></td>
+                            <td class="cells"><button class="buttons">CE</button></td>
+                            <td class="cells"><button class="buttons">C</button></td>
+                        </tr>
+                        <tr align="center">
+                            <td><button class="buttons">MC</button></td>
+                            <td><button class="buttons">7</button></td>
+                            <td><button class="buttons">8</button></td>
+                            <td><button class="buttons">9</button></td>
+                            <td><button class="buttons">/</button></td>
+                            <td><button class="buttons">sqrt</button></td>
+                        </tr>
+                        <tr align="center">
+                            <td><button class="buttons">MR</button></td>
+                            <td><button class="buttons">4</button></td>
+                            <td><button class="buttons">5</button></td>
+                            <td><button class="buttons">6</button></td>
+                            <td><button class="buttons">*</button></td>
+                            <td><button class="buttons">%</button></td>
+                        </tr>
+                        <tr align="center">
+                            <td><button class="buttons">MS</button></td>
+                            <td><button class="buttons">1</button></td>
+                            <td><button class="buttons">2</button></td>
+                            <td><button class="buttons">3</button></td>
+                            <td><button class="buttons">-</button></td>
+                            <td><button class="buttons">1/x</button></td>
+                        </tr>
+                        <tr align="center">
+                            <td><button class="buttons">M+</button></td>
+                            <td><button class="buttons">0</button></td>
+                            <td><button class="buttons">+/-</button></td>
+                            <td><button class="buttons">,</button></td>
+                            <td><button class="buttons">+</button></td>
+                            <td><button class="buttons">=</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+
+            <td valign="top">
+                <table border="1" cellpadding="4" cellspacing="2" width="100%">
+                     <tbody>
+                        <tr>
+                            <th width="40%">Назначение</th>
+                            <th width="60%">Название</th>
+                        </tr>
+                        <tr>
+                            <td>Ввод чисел</td>
+                            <td>0 1 2 3 4 5 6 7 8 9 . +/-</td>
+                        </tr>
+                        <tr>
+                            <td>Основные операции</td>
+                            <td>+  -  *  /  =</td>
+                        </tr>
+                        <tr>
+                            <td>Специальные операции</td>
+                            <td>sqrt   %   1/x</td>
+                        </tr>
+                        <tr>
+                            <td>Редактирование введённого числа</td>
+                            <td>Backspace   CE   C</td>
+                        </tr>
+                        <tr>
+                            <td>Работа с памятью</td>
+                            <td>MC   MR   MS   M+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>     
+    </tbody>
+</table>
+
+<script src="logic2.js"></script>

@@ -1,0 +1,100 @@
+<head>
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<h1 align="center">Калькулятор</h1>
+<table border="1" cellpadding="6" cellspacing="1" align="center" style="background-color: white; user-select: none;">
+    <tbody>
+        <tr>
+            <th width="400">Вид</th>
+            <th width="300">Кнопки</th>
+        </tr>
+
+        <tr>
+           
+            <td valign="bottom" align="center">
+                <table border="2" width="100%" height="300" id="calcTable">
+                     <tbody>
+                        <tr>
+                            <td colspan="6">
+                                <input type="text" id="display" value="0" class="dis">
+                            </td>
+                        </tr>
+                        <tr align="center">
+                            <td class="cells"></td>
+                            <td colspan="3" class="biggerCells" onclick="pressBackspace()" ><b>Backspace</b></td>
+                            <td class="cells" onclick="pressCE()"><b>CE</b></td>
+                            <td class="cells" onclick="Clear()"><b>C</b></td>
+                        </tr>
+                        <tr align="center">
+                            <td pressMC()><b>MC</b></td>
+                            <td class="smallerCells" onclick="pressDigit('7')"><b>7</b></td>
+                            <td class="smallerCells" onclick="pressDigit('8')"><b>8</b></td>
+                            <td class="smallerCells" onclick="pressDigit('9')"><b>9</b></td>
+                            <td onclick="pressOperator('/')"><b>/</b></td>
+                            <td onclick="pressSqrt()"><b>sqrt</b></td>
+                        </tr>
+                        <tr align="center">
+                            <td onclick="pressMR()"><b>MR</b></td>
+                            <td onclick="pressDigit('4')"><b>4</b></td>
+                            <td onclick="pressDigit('5')"><b>5</b></td>
+                            <td onclick="pressDigit('6')"><b>6</b></td>
+                            <td onclick="pressOperator('*')"><b>*</b></td>
+                            <td onclick="pressPercent()"><b>%</b></td>
+                        </tr>
+                        <tr align="center">
+                            <td onclick="pressMS()"><b>MS</b></td>
+                            <td onclick="pressDigit('1')"><b>1</b></td>
+                            <td onclick="pressDigit('2')"><b>2</b></td>
+                            <td onclick="pressDigit('3')"><b>3</b></td>
+                            <td onclick="pressOperator('-')"><b>-</b></td>
+                            <td onclick="pressReciprocal()"><b>1/x</b></td>
+                        </tr>
+                        <tr align="center">
+                            <td onclick="pressMPlus()"><b>M+</b></td>
+                            <td onclick="pressDigit('0')"><b>0</b></td>
+                            <td onclick="pressToggleSign()"><b>+/-</b></td>
+                            <td onclick="pressDot()"><b>,</b></td>
+                            <td onclick="pressOperator('+')"><b>+</b></td>
+                            <td onclick="pressEquals()"><b>=</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+
+            <td valign="top">
+                <table border="1" cellpadding="4" cellspacing="2" width="100%">
+                     <tbody>
+                        <tr>
+                            <th width="40%">Назначение</th>
+                            <th width="60%">Название</th>
+                        </tr>
+                        <tr>
+                            <td>Ввод чисел</td>
+                            <td>0 1 2 3 4 5 6 7 8 9 . +/-</td>
+                        </tr>
+                        <tr>
+                            <td>Основные операции</td>
+                            <td>+  -  *  /  =</td>
+                        </tr>
+                        <tr>
+                            <td>Специальные операции</td>
+                            <td>sqrt   %   1/x</td>
+                        </tr>
+                        <tr>
+                            <td>Редактирование введённого числа</td>
+                            <td>Backspace   CE   C</td>
+                        </tr>
+                        <tr>
+                            <td>Работа с памятью</td>
+                            <td>MC   MR   MS   M+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>     
+    </tbody>
+</table>
+
+<script src="logic.js"></script>
