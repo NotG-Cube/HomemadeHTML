@@ -1,0 +1,404 @@
+<head>
+    <title>Формы — Регистрация, Фильтр, Обратная связь, Анкета</title>
+</head>
+<body>
+    <h1>Формы</h1>
+    <nav>
+        <p>Навигация по странице:</p>
+        <ul>
+            <li><a href="#registration">Регистрация</a></li>
+            <li><a href="#filter">Фильтр каталога</a></li>
+            <li><a href="#feedback">Обратная связь</a></li>
+            <li><a href="#questionnaire">Большая анкета</a></li>
+        </ul>
+    </nav>
+    <hr>
+
+
+
+    <section id="registration">
+        <h2>Регистрация</h2>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Личные данные</legend>
+                <p>
+                    <label for="reg-name">Имя: *</label><br>
+                    <input type="text" id="reg-name" name="first_name" required minlength="2" maxlength="50">
+                </p>
+                <p>
+                    <label for="reg-surname">Фамилия: *</label><br>
+                    <input type="text" id="reg-surname" name="last_name" required minlength="2" maxlength="50">
+                </p>
+                <p>
+                    <label for="reg-birthday">Дата рождения: *</label><br>
+                    <input type="date" id="reg-birthday" name="birthday" required>
+                </p>
+                <p>
+                    <label>Пол: *</label><br>
+                    <input type="radio" id="gender-male" name="gender" value="male" required>
+                    <label for="gender-male">Мужской</label>
+                    <input type="radio" id="gender-female" name="gender" value="female">
+                    <label for="gender-female">Женский</label>
+                    <input type="radio" id="gender-other" name="gender" value="other">
+                    <label for="gender-other">Другой (* признано экстремистской организацией)</label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Контактные данные</legend>
+                <p>
+                    <label for="reg-email">Email: *</label><br>
+                    <input type="email" id="reg-email" name="email" required placeholder="your@email.ru">
+                </p>
+                <p>
+                    <label for="reg-phone">Телефон:</label><br>
+                    <input type="tel" id="reg-phone" name="phone" placeholder="+7 (999) 123-45-67">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Пароль</legend>
+                <p>
+                    <label for="reg-password">Пароль: *</label><br>
+                    <input type="password" id="reg-password" name="password" required minlength="8" placeholder="Минимум 8 символов">
+                </p>
+                <p>
+                    <label for="reg-password-confirm">Подтверждение пароля: *</label><br>
+                    <input type="password" id="reg-password-confirm" name="password_confirm" required minlength="8" placeholder="Повторите пароль">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Согласие *</legend>
+                <p>
+                    <input type="checkbox" id="reg-agree" name="agree" required>
+                    <label for="reg-agree">Я согласен с условиями использования </label>
+                </p>
+            </fieldset>
+            <p>
+                <button type="submit">Зарегистрироваться</button>
+                <button type="reset">Очистить форму</button>
+            </p>
+        </form>
+    </section>
+    <hr>
+
+
+
+    <section id="filter">
+        <h2>Фильтр каталога</h2>
+        <form action="#" method="get">
+            <fieldset>
+                <legend>Поиск и сортировка</legend>
+                <p>
+                    <label for="filter-search">Строка поиска:</label><br>
+                    <input type="search" id="filter-search" name="q" placeholder="Введите запрос...">
+                </p>
+                <p>
+                    <label for="filter-category">Категория:</label><br>
+                    <select id="filter-category" name="category">
+                        <option value="">— Все категории —</option>
+                        <option value="lotki">Лотки</option>
+                        <option value="napolnitel">Наполнители</option>
+                        <option value="korm">Корм</option>
+                        <option value="igrushki">Игрушки</option>
+                        <option value="lezhanka">Лежанки</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="filter-sort">Сортировка:</label><br>
+                    <select id="filter-sort" name="sort">
+                        <option value="popular">По популярности</option>
+                        <option value="price-asc">Цена: по возрастанию</option>
+                        <option value="price-desc">Цена: по убыванию</option>
+                        <option value="name-asc">Название: А–Я</option>
+                        <option value="name-desc">Название: Я–А</option>
+                        <option value="new">Сначала новые</option>
+                    </select>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Диапазон цены</legend>
+                <input type="range" id="r-price" name="price" min="0" max="100000" value="50000">
+                <output for="r-price">50000</output>
+            </fieldset>
+            <fieldset>
+                <legend>Особенности (чекбоксы)</legend>
+                <p>
+                    <input type="checkbox" id="filter-sale" name="features" value="sale">
+                    <label for="filter-sale">Со скидкой</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="filter-new" name="features" value="new">
+                    <label for="filter-new">Новинки</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="filter-stock" name="features" value="in_stock">
+                    <label for="filter-stock">В наличии</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="filter-free-delivery" name="features" value="free_delivery">
+                    <label for="filter-free-delivery">Бесплатная доставка</label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Рейтинг (radio)</legend>
+                <p>
+                    <input type="radio" id="rating-any" name="rating" value="" checked>
+                    <label for="rating-any">Любой</label>
+                </p>
+                <p>
+                    <input type="radio" id="rating-3" name="rating" value="3">
+                    <label for="rating-3">От 3 звёзд</label>
+                </p>
+                <p>
+                    <input type="radio" id="rating-4" name="rating" value="4">
+                    <label for="rating-4">От 4 звёзд</label>
+                </p>
+                <p>
+                    <input type="radio" id="rating-5" name="rating" value="5">
+                    <label for="rating-5">Только 5 звёзд</label>
+                </p>
+            </fieldset>
+            <p>
+                <button type="submit">Применить фильтр</button>
+                <button type="reset">Сбросить</button>
+            </p>
+        </form>
+    </section>
+    <hr>
+
+    
+
+    <section id="feedback">
+        <h2>Обратная связь</h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Ваши данные</legend>
+                <p>
+                    <label for="fb-name">Имя: *</label><br>
+                    <input type="text" id="fb-name" name="name" required>
+                </p>
+                <p>
+                    <label for="fb-email">Email: *</label><br>
+                    <input type="email" id="fb-email" name="email" required placeholder="your@email.ru">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Обращение</legend>
+                <p>
+                    <label for="fb-subject">Тема: *</label><br>
+                    <input type="text" id="fb-subject" name="subject" required>
+                </p>
+                <p>
+                    <label for="fb-priority">Приоритет обращения:</label><br>
+                    <select id="fb-priority" name="priority">
+                        <option value="low">Низкий — просто вопрос</option>
+                        <option value="normal" selected>Обычный</option>
+                        <option value="high">Высокий — нужна помощь</option>
+                        <option value="critical">Критический — всё сломалось</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="fb-message">Сообщение: *</label><br>
+                    <textarea id="fb-message" name="message" required rows="8" cols="60" placeholder="Опишите вашу ситуацию подробно..."></textarea>
+                </p>
+                <p>
+                    <label for="fb-file">Приложить файл:</label><br>
+                    <input type="file" id="fb-file" name="attachment" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
+                </p>
+            </fieldset>
+            <p>
+                <button type="submit">Отправить обращение</button>
+            </p>
+        </form>
+    </section>
+    <hr>
+
+
+
+
+    <section id="questionnaire">
+        <h2>Большая анкета</h2>
+        <form action="#" method="post">
+            <!-- Личные данные -->
+            <fieldset>
+                <legend>Личные данные</legend>
+                <!-- Поле 1 -->
+                <p>
+                    <label for="q-surname">Фамилия: *</label><br>
+                    <input type="text" id="q-surname" name="surname" required>
+                </p>
+                <!-- Поле 2 -->
+                <p>
+                    <label for="q-firstname">Имя: *</label><br>
+                    <input type="text" id="q-firstname" name="firstname" required>
+                </p>
+                <!-- Поле 3 -->
+                <p>
+                    <label for="q-patronymic">Отчество:</label><br>
+                    <input type="text" id="q-patronymic" name="patronymic">
+                </p>
+                <!-- Поле 4 -->
+                <p>
+                    <label for="q-birthday">Дата рождения: *</label><br>
+                    <input type="date" id="q-birthday" name="birthday" required>
+                </p>
+                <!-- Поле 5 -->
+                <p>
+                    <label>Пол: *</label><br>
+                    <input type="radio" id="q-male" name="sex" value="male" required>
+                    <label for="q-male">Мужской</label>
+                    <input type="radio" id="q-female" name="sex" value="female">
+                    <label for="q-female">Женский</label>
+                </p>
+                <!-- Поле 6 -->
+                <p>
+                    <label for="q-photo">Фото:</label><br>
+                    <input type="file" id="q-photo" name="photo" accept="image/*">
+                </p>
+            </fieldset>
+
+            <!-- Контакты -->
+            <fieldset>
+                <legend>Контакты</legend>
+                <!-- Поле 7 -->
+                <p>
+                    <label for="q-email">Email: *</label><br>
+                    <input type="email" id="q-email" name="email" required placeholder="you@example.com">
+                </p>
+                <!-- Поле 8 -->
+                <p>
+                    <label for="q-phone">Телефон: *</label><br>
+                    <input type="tel" id="q-phone" name="phone" required placeholder="+7 (___) ___-__-__">
+                </p>
+                <!-- Поле 9 -->
+                <p>
+                    <label for="q-website">Личный сайт / портфолио:</label><br>
+                    <input type="url" id="q-website" name="website" placeholder="https://">
+                </p>
+                <!-- Поле 10 -->
+                <p>
+                    <label for="q-city">Город: *</label><br>
+                    <input type="text" id="q-city" name="city" required list="cities-list" placeholder="Начните вводить...">
+                    <datalist id="cities-list">
+                        <option value="Москва">
+                        <option value="Санкт-Петербург">
+                        <option value="Южно-Сахалинск">
+                        <option value="Хабаровск">
+                        <option value="Владивосток">
+                        <option value="Благовещенск">
+                        <option value="Новосибирск">
+                        <option value="Южно-Сахалинск">
+                    </datalist>
+                </p>
+            </fieldset>
+            <!-- Секция 3: Предпочтения -->
+            <fieldset>
+                <legend>Предпочтения</legend>
+                <!-- Поле 11 -->
+                <p>
+                    <label for="q-color">Любимый цвет:</label><br>
+                    <input type="color" id="q-color" name="fav_color" value="#3b82f6">
+                </p>
+                <!-- Поле 12 -->
+                <p>
+                    <label for="q-lang">Предпочитаемый язык интерфейса:</label><br>
+                    <select id="q-lang" name="language">
+                        <option value="ru" selected>Русский</option>
+                        <option value="en">English</option>
+                        <option value="jp">日本語</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </p>
+                <!-- Поле 13 -->
+                <p>
+                    <label>Интересы (можно несколько):</label><br>
+                    <input type="checkbox" id="q-int-tech" name="interests" value="tech">
+                    <label for="q-int-tech">Технологии</label><br>
+                    <input type="checkbox" id="q-int-sport" name="interests" value="sport">
+                    <label for="q-int-sport">Спорт</label><br>
+                    <input type="checkbox" id="q-int-music" name="interests" value="music">
+                    <label for="q-int-music">Музыка</label><br>
+                    <input type="checkbox" id="q-int-art" name="interests" value="art">
+                    <label for="q-int-art">Искусство</label><br>
+                    <input type="checkbox" id="q-int-travel" name="interests" value="travel">
+                    <label for="q-int-travel">Путешествия</label><br>
+                    <input type="checkbox" id="q-int-food" name="interests" value="food">
+                    <label for="q-int-food">Кулинария</label>
+                </p>
+                <!-- Поле 14 -->
+                <p>
+                    <label>Как часто вы пользуетесь интернетом?</label><br>
+                    <input type="radio" id="q-freq-always" name="internet_freq" value="always" required>
+                    <label for="q-freq-always">Постоянно</label><br>
+                    <input type="radio" id="q-freq-daily" name="internet_freq" value="daily">
+                    <label for="q-freq-daily">Каждый день, но не весь день</label><br>
+                    <input type="radio" id="q-freq-sometimes" name="internet_freq" value="sometimes">
+                    <label for="q-freq-sometimes">Иногда</label><br>
+                    <input type="radio" id="q-freq-rarely" name="internet_freq" value="rarely">
+                    <label for="q-freq-rarely">Редко</label>
+                </p>
+                <!-- Поле 15 -->
+                <p>
+                    <label for="q-satisfaction">Уровень удовлетворённости жизнью (1–10):</label><br>
+                    <input type="range" id="q-satisfaction" name="satisfaction" min="1" max="10" value="7">
+                    <output for="q-satisfaction">7</output>
+                </p>
+            </fieldset>
+            <!-- Секция 4: Дополнительная информация -->
+            <fieldset>
+                <legend>Дополнительная информация</legend>
+                <!-- Поле 16 -->
+                <p>
+                    <label for="q-experience">Опыт работы (лет):</label><br>
+                    <input type="number" id="q-experience" name="experience" min="0" max="50" step="1" value="0">
+                </p>
+                <!-- Поле 17 -->
+                <p>
+                    <label for="q-salary">Ожидаемая зарплата (₽):</label><br>
+                    <input type="number" id="q-salary" name="salary" min="0" step="5000" placeholder="50000">
+                </p>
+                <!-- Поле 18 -->
+                <p>
+                    <label for="q-start-date">Готовность приступить к работе:</label><br>
+                    <input type="date" id="q-start-date" name="start_date">
+                </p>
+                <!-- Поле 19 -->
+                <p>
+                    <label for="q-about">О себе:</label><br>
+                    <textarea id="q-about" name="about" rows="5" cols="60" placeholder="Расскажите о себе в свободной форме..."></textarea>
+                </p>
+                <!-- Поле 20 -->
+                <p>
+                    <input type="checkbox" id="q-agree" name="agree_policy" required>
+                    <label for="q-agree">Я даю согласие на обработку персональных данных</label>
+                </p>
+                <!-- Поле 21 -->
+                <p>
+                    <input type="checkbox" id="q-newsletter" name="newsletter">
+                    <label for="q-newsletter">Хочу получать рассылку</label>
+                </p>
+            </fieldset>
+            <p>
+                <button type="submit">Отправить анкету</button>
+                <button type="reset">Очистить всё</button>
+            </p>
+        </form>
+    </section>
+    <hr>
+</body>
+
+
+
+ <script>
+        var slider1 = document.getElementById('r-price');
+        var output1 = document.querySelector('output[for="r-price"]');
+        slider1.addEventListener('input', function() {
+            output1.textContent = this.value;
+        });
+
+
+        var slider2 = document.getElementById('q-satisfaction');
+        var output2 = document.querySelector('output[for="q-satisfaction"]');
+        slider2.addEventListener('input', function() {
+            output2.textContent = this.value;
+        });
+    </script>
