@@ -1,0 +1,162 @@
+<link rel="stylesheet" href="style.css">
+<head>
+    <title>Размеры, поток, display, overflow, box-sizing</title>
+</head>
+<body>
+
+<h2>Задача 1 — 8 карточек одинаковой ширины</h2>
+
+<div class="cards">
+    <div class="card">
+        <h3>Карточка 1</h3>
+        <img src="picture1.jfif" alt="картинка 1">
+        <p>Короткое описание.</p>
+        <button>Погладить</button>
+    </div>
+    <div class="card">
+        <h3>Карточка 2</h3>
+        <img src="picture2.jfif" alt="картинка 2">
+        <p>Это очень длинное описание. текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст</p>
+        <button>Погладить</button>
+    </div>
+    <div class="card">
+        <h3>Карточка 3</h3>
+        <img src="picture3.jfif" alt="картинка 3">
+        <p>Среднее описание. текст текст текст текст текст текст текст текст текст текст текст текст </p>
+        <button>Погладить</button>
+    </div>
+    <div class="card">
+        <h3>Карточка 4</h3>
+        <img src="picture4.jfif" alt="картинка 4">
+        <p>Краткое описание.</p>
+        <button>Погладить</button>
+    </div>
+    <div class="card">
+        <h3>Карточка 5</h3>
+        <img src="picture5.jfif" alt="картинка 5">
+        <p>Это длинное описание. текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст</p>
+        <button>Погладить</button>
+    </div>
+    <div class="card">
+        <h3>Карточка 6</h3>
+        <img src="picture6.jfif" alt="картинка">
+        <p>Описание средней длины для этой карточки.</p>
+        <button>Погладить</button>
+    </div>
+    <div class="card">
+        <h3>Карточка 7</h3>
+        <img src="picture7.jfif" alt="картинка 7">
+        <p>Это очень длинное описание. текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст</p>
+        <button>Погладить</button>
+    </div>
+    <div class="card">
+        <h3>Карточка 8</h3>
+        <img src="picture8.jfif" alt="картинка 8">
+        <p>Коротко.</p>
+        <button>Погладить</button>
+    </div>
+</div>
+
+<h2>Задача 2 — display: block, inline, inline-block, none</h2>
+
+<h3>display: block</h3>
+<div class="block-demo">
+    <div>Блок 1</div>
+    <div>Блок 2</div>
+    <div>Блок 3</div>
+</div>
+
+<h3>display: inline</h3>
+<div class="inline-demo">
+    <span>Инлайн 1</span>
+    <span>Инлайн 2</span>
+    <span>Инлайн 3</span>
+</div>
+
+<h3>display: inline-block</h3>
+<div class="inline-block-demo">
+    <span>Инлайн-блок 1</span>
+    <span>Инлайн-блок 2</span>
+    <span>Инлайн-блок 3</span>
+</div>
+
+<h3>display: none</h3>
+<div class="none-demo">
+    <span style="background:#ffa07a; border:2px solid #333; padding:5px 10px;">Видимый элемент</span>
+    <span class="hidden-el" style="background:#ffa07a; border:2px solid #333; padding:5px 10px;">Скрытый элемент (display: none)</span>
+    <span style="background:#ffa07a; border:2px solid #333; padding:5px 10px;">Видимый элемент</span>
+</div>
+<p><em>Средний элемент скрыт.</em></p>
+
+<h2>Задача 3 — overflow: visible, hidden, scroll, auto</h2>
+
+<div class="overflow-boxes">
+    <div class="overflow-box ov-visible">
+        <strong>overflow: visible</strong><br>
+        Длинный текст, который не помещается в блок. Текст выходит за границы контейнера и виден снаружи. Продолжаем писать, чтобы было много контента. Ещё больше текста для переполнения.
+    </div>
+    <div class="overflow-box ov-hidden">
+        <strong>overflow: hidden</strong><br>
+        Длинный текст, который не помещается в блок. Текст обрезается на границе контейнера и скрывается. Продолжаем писать, чтобы было много контента. Ещё больше текста для переполнения.
+    </div>
+    <div class="overflow-box ov-scroll">
+        <strong>overflow: scroll</strong><br>
+        Длинный текст, который не помещается в блок. Появляется полоса прокрутки, всегда видна. Продолжаем писать, чтобы было много контента. Ещё больше текста для переполнения.
+    </div>
+    <div class="overflow-box ov-auto">
+        <strong>overflow: auto</strong><br>
+        Длинный текст, который не помещается в блок. Полоса прокрутки появляется только при необходимости. Продолжаем писать, чтобы было много контента. Ещё больше текста для переполнения.
+    </div>
+</div>
+
+<h2>Задача 4 — content-box vs border-box</h2>
+
+<div class="box-compare">
+    <div>
+        <strong>box-sizing: content-box</strong><br>
+        <em>width: 300px + padding 20px×2 + border 10px×2 = 360px итого</em>
+        <div class="box-content"> content-box итоговый размер = 360px.</div>
+    </div>
+    <div>
+        <strong>box-sizing: border-box</strong><br>
+        <em>width: 300px (уже включает padding и border) = 300px итого</em>
+        <div class="box-border">border-box итоговый размер = 300px.</div>
+    </div>
+</div>
+
+<h2>Задача 5 — Каталог</h2>
+
+<div class="catalog">
+    <div class="catalog-card">
+        <img src="skate1.jfif" alt="Товар">
+        <h3>Крутой скейт</h3>
+        <p>Простой, но от этого не менее крутой скейт. Классический скейт подойдет для начинающий их опытных скейтеров. Дешевый и удобный для кастопизации! </p>
+        <button>В корзину</button>
+    </div>
+    <div class="catalog-card">
+        <img src="skate2.jpeg" alt="Товар">
+        <h3>Реально крутой скейт</h3>
+        <p>Очень крутой скейт чтобы понтануться перед кентами! +100 к эпичности ваших трюков</p>
+        <button>В корзину</button>
+    </div>
+    <div class="catalog-card">
+        <img src="kepka1.jpg" alt="Товар">
+        <h3>Крутая кепка</h3>
+        <p>О БОЖЕ, ЭТО ЧТО ЧЕРЕП!??!</p>
+        <button>В корзину</button>
+    </div>
+    <div class="catalog-card">
+        <img src="kepka2.jfif" alt="Товар">
+        <h3>Кепка</h3>
+        <p>Стильная, но простая кепка. Когда-то все в таких гоняли!</p>
+        <button>В корзину</button>
+    </div>
+    <div class="catalog-card">
+        <img src="sun-glasses.png" alt="Товар">
+        <h3>Солнечные очки</h3>
+        <p>Кататься в очках не очень удобно и безопасно. Но они все равно крутые!</p>
+        <button>В корзину</button>
+    </div>
+</div>
+
+</body>
