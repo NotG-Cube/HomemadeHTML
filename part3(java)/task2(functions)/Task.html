@@ -1,0 +1,68 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <section>
+        <h2>Задача 1. Калькулятор с вводом из вёрстки</h2>
+
+        <input type="text" id="numA" placeholder="Первое число">
+        <select id="operation">
+            <option value="add">+</option>
+            <option value="subtract">−</option>
+            <option value="multiply">×</option>
+            <option value="divide">÷</option>
+        </select>
+        <input type="text" id="numB" placeholder="Второе число">
+        <button onclick="calculate()">Посчитать</button>
+
+        <div id="calcResult" class="result"></div>
+    </section>
+
+    <section>
+        <h2>Задача 2. Таблица умножения</h2>
+        <input type="text" id="multiplyNum" placeholder="Введите число">
+        <button onclick="showTable()">Показать таблицу</button>
+        <div id="tableResult" class="result"></div>
+    </section>
+
+    <section>
+        <h2>Задача 3. Генератор карточек товаров</h2>
+        <button onclick="renderCards()">Сгенерировать карточки</button>
+        <div id="cardsContainer" class="cards-container"></div>
+    </section>
+
+    <section>
+        <h2>Задача 4. Список чисел</h2>
+        <input type="text" id="numberInput" placeholder="Введите число">
+        <button onclick="addNumber()">Добавить</button>
+        <div id="numberList" class="result"></div>
+        <div id="sumResult" class="result"></div>
+        <div id="avgResult" class="result"></div>
+    </section>
+
+    <section>
+        <h2>Задача 5. Проверка пароля</h2>
+        <input type="text" id="passInput" placeholder="Введите пароль">
+        <button onclick="checkPassword()">Проверить</button>
+        <div id="passResult" class="result"></div>
+    </section>
+
+    <section>
+        <h2>Задача 6. Генератор списка пунктов меню</h2>
+        <button onclick="renderMenu()">Сгенерировать меню</button>
+        <nav id="menuContainer"></nav>
+
+    </section>
+
+    <section>
+        <h2>Задача 7. Область видимости</h2>
+        <p>Ошибку видно в консоли</p>
+        <button onclick="runScopeDemo()">Запустить пример</button>
+        <div id="scopeResult" class="scope-block"></div>
+    </section>
+</body>
+
+
+<script src="logic.js"></script>

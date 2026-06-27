@@ -1,0 +1,112 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <section>
+        <h2>Задача 1. Кнопка приветствия</h2>
+        <input type="text" id="nameInput" placeholder="Введите имя">
+        <button onclick="greet()">Поприветствовать</button>
+        <div id="result" class="result"></div>
+    </section>
+
+    <section>
+        <h2>Задача 2. Мини-калькулятор скидки</h2>
+        <input type="text" id="priceInput" placeholder="Цена">
+        <input type="text" id="discountInput" placeholder="Скидка (%)">
+        <button onclick="calcDiscount()">Рассчитать</button>
+        <div id="discountResult" class="result"></div>
+    </section>
+
+    <section>
+        <h2>Задача 3. Проверка возраста</h2>
+        <input type="text" id="ageInput" placeholder="Введите возраст">
+        <button onclick="checkAge()">Проверить</button>
+        <div id="ageResult" class="result"></div>
+    </section>
+
+
+
+    <h2>Задача 4. Проверка формы регистрации</h2>
+    <section>
+        <form action="#" method="post" onsubmit="return validateForm()">
+            <fieldset>
+                <legend>Личные данные</legend>
+                <p>
+                    <label for="reg-name">Имя: *</label><br>
+                    <input type="text" id="reg-name" name="first_name" minlength="2" maxlength="50">
+                </p>
+                <p>
+                    <label for="reg-surname">Фамилия: *</label><br>
+                    <input type="text" id="reg-surname" name="last_name" minlength="2" maxlength="50">
+                </p>
+                <p>
+                    <label for="reg-birthday">Дата рождения: *</label><br>
+                    <input type="date" id="reg-birthday" name="birthday">
+                </p>
+                <p>
+                    <label>Пол: *</label><br>
+                    <input type="radio" id="gender-male" name="gender" value="male">
+                    <label for="gender-male">Мужской</label>
+                    <input type="radio" id="gender-female" name="gender" value="female">
+                    <label for="gender-female">Женский</label>
+                    <input type="radio" id="gender-other" name="gender" value="other">
+                    <label for="gender-other">Другой (* признано экстремистской организацией)</label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Контактные данные</legend>
+                <p>
+                    <label for="reg-email">Email: *</label><br>
+                    <input type="email" id="reg-email" name="email" placeholder="your@email.ru">
+                </p>
+                <p>
+                    <label for="reg-phone">Телефон:</label><br>
+                    <input type="tel" id="reg-phone" name="phone" placeholder="+7 (999) 123-45-67">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Пароль</legend>
+                <p>
+                    <label for="reg-password">Пароль: *</label><br>
+                    <input type="password" id="reg-password" name="password" minlength="8"
+                        placeholder="Минимум 8 символов">
+                </p>
+                <p>
+                    <label for="reg-password-confirm">Подтверждение пароля: *</label><br>
+                    <input type="password" id="reg-password-confirm" name="password_confirm" minlength="8"
+                        placeholder="Повторите пароль">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Согласие *</legend>
+                <p>
+                    <input type="checkbox" id="reg-agree" name="agree">
+                    <label for="reg-agree">Я согласен с условиями использования</label>
+                </p>
+            </fieldset>
+            <p>
+                <button type="submit">Зарегистрироваться</button>
+                <button type="reset">Очистить форму</button>
+            </p>
+        </form>
+        <div id="regResult" class="result"></div>
+    </section>
+
+    <section>
+        <h2>Задача 5. Проверка цены товара</h2>
+        <input type="text" id="priceCheck" placeholder="Введите цену">
+        <button onclick="checkPrice()">Проверить</button>
+        <div id="priceResult" class="result"></div>
+    </section>
+
+    <section>
+        <h2>Задача 6. Переключатель состояния</h2>
+        <button onclick="toggle()">Переключить</button>
+        <div id="toggleResult" class="result state-off">Выключено</div>
+    </section>
+</body>
+
+
+<script src="logic.js"></script>
