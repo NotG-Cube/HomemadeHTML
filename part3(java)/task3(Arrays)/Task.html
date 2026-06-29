@@ -1,0 +1,49 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+    <h2>Задача 1. Каталог товаров из массива</h2>
+    <div id="cat1"></div>
+
+
+    <h2>Задача 2. Фильтрация товаров по названию</h2>
+    <input id="search2" placeholder="Поиск товара">
+    <button onclick="searchProducts()">Искать</button>
+    <div id="res2" class="result"></div>
+
+
+    <h2>Задача 3. Поиск пользователя по id</h2>
+    <input id="uid" placeholder="Введите id" type="number">
+    <button onclick="findUser()">Найти</button>
+    <div id="res3" class="result"></div>
+
+
+    <h2>Задача 4. Преобразование цен</h2>
+    <div id="res4"></div>
+
+
+    <h2>Задача 5. Список задач</h2>
+    <button onclick="showTasks('all')">Все</button>
+    <button onclick="showTasks('done')">Выполненные</button>
+    <button onclick="showTasks('todo')">Невыполненные</button>
+    <div id="res5" class="result"></div>
+
+
+    <h2>Задача 6. Корзина</h2>
+    <div id="res6"></div>
+    <div id="totals6" class="total-box"></div>
+
+
+    <h2>Задача 7. Простая сортировка</h2>
+    <button onclick="sortGoods('asc')">По возрастанию</button>
+    <button onclick="sortGoods('desc')">По убыванию</button>
+    <button onclick="sortGoods('def')">Исходный</button>
+    <div id="res7" class="result"></div>
+
+</body>
+
+
+<script src="logic.js"></script>

@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f3f3f3;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #fff;
+    padding: 10px 15px;
+    margin: 5px 0;
+}
+
+.active-user {
+    border-left: 5px solid #2e7d32;
+}
+.unactive-user {
+    border-left: 5px solid #7c0909;
+}
+
+.badge {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 3px 8px;
+    font-size: 14px;
+}
+.anti-badge
+{
+    background: #f5e8e8;
+    color: #7c0909;
+    padding: 3px 8px;
+    font-size: 14px;
+}
+
+button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: #fff;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+th {
+    background: #f8f8f8;
+}
