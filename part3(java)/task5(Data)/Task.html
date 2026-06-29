@@ -1,0 +1,50 @@
+<head>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+  <h1>Работа с данными</h1>
+
+  <h2>Задача 1. Подготовка товаров для UI</h2>
+  <div id="res1"></div>
+
+  <h2>Задача 2. Каталог по категориям</h2>
+  <div id="res2"></div>
+
+  <h2>Задача 3. Списки пользователей</h2>
+  <div id="res3"></div>
+
+  <h2>Задача 4. Таблица заказов</h2>
+  <div id="res4"></div>
+
+  <h2>Задача 5. Фильтрация и сортировка каталога</h2>
+  <input id="searchInput" placeholder="Поиск по названию" oninput="updateCatalog()">
+  <select id="catSelect" onchange="updateCatalog()">
+    <option value="">Все категории</option>
+  </select>
+  <select id="sortSelect" onchange="updateCatalog()">
+    <option value="">Без сортировки</option>
+    <option value="asc">Цена ↑</option>
+    <option value="desc">Цена ↓</option>
+  </select>
+  <div id="res5"></div>
+
+  <h2>Задача 6. Чистые функции</h2>
+  <p><b>Фильтр «Периферия»:</b></p>
+  <div id="res6a"></div>
+  <p><b>Поиск «мо»:</b></p>
+  <div id="res6b"></div>
+  <p><b>Сортировка по цене (возрастание):</b></p>
+  <div id="res6c"></div>
+  <p><b>Форматирование:</b></p>
+  <div id="res6d"></div>
+
+  <h2>Задача 7. Подготовка данных для карточек</h2>
+  <div id="res7"></div>
+
+</body>
+
+
+<script src="logic.js"></script>
