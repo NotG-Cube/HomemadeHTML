@@ -1,0 +1,69 @@
+<head>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <h1>События</h1>
+
+  <h2>Задача 1. Кнопка счётчика</h2>
+  <button id="countBtn">Клик</button>
+  <p>Счётчик: <span id="countVal">0</span></p>
+
+  <h2>Задача 2. Live input</h2>
+  <input id="liveInput" placeholder="Введите текст...">
+  <p id="liveOutput">Начните вводить текст...</p>
+
+  <h2>Задача 3. Форма регистрации</h2>
+  <form id="regForm">
+    <input id="regName" placeholder="Имя"><br><br>
+    <input id="regEmail" placeholder="Email"><br><br>
+    <input id="regPass" type="password" placeholder="Пароль"><br><br>
+    <button type="submit">Зарегистрироваться</button>
+  </form>
+  <div id="regErrors"></div>
+  <div id="regResult"></div>
+
+
+  <h2>Задача 4. TODO список</h2>
+  <input id="todoInput" placeholder="Новая задача...">
+  <button id="todoAdd">Добавить</button>
+  <p>Всего: <span id="todoTotal">0</span> | Выполнено: <span id="todoDone">0</span></p>
+  <div id="todoList"></div>
+</body>
+
+<h2>Задача 5. Делегирование событий</h2>
+<button id="resetCards">Перезапуск</button>
+<div id="cartMsg"></div>
+<div id="cards"></div>
+
+<h2>Задача 6. Фильтр каталога</h2>
+<input id="filterSearch" placeholder="Поиск...">
+<select id="filterCat">
+  <option value="all">Все категории</option>
+  <option value="phone">Телефоны</option>
+  <option value="laptop">Ноутбуки</option>
+  <option value="acc">Аксессуары</option>
+</select>
+<select id="filterSort">
+  <option value="default">Без сортировки</option>
+  <option value="price-asc">Цена ↑</option>
+  <option value="price-desc">Цена ↓</option>
+  <option value="name-asc">Имя А-Я</option>
+</select>
+<div id="filterList"></div>
+
+<h2>Задача 7. Корзина с событиями</h2>
+<div style="display:flex; gap:40px; flex-wrap:wrap;">
+  <div style="flex:1; min-width:250px;">
+    <h3>Каталог</h3>
+    <div id="catalog"></div>
+  </div>
+  <div style="flex:1; min-width:250px;">
+    <h3>Корзина</h3>
+    <div id="basket"></div>
+    <p><b>Итого: <span id="basketTotal">0</span>$</b></p>
+  </div>
+</div>
+
+<script src="logic.js"></script>

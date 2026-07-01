@@ -1,0 +1,54 @@
+<head>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <h2>Задача 1. Изменение текста</h2>
+  <h3 id="title1">Старый заголовок</h3>
+  <button id="btn1">Изменить текст</button>
+
+  <h2>Задача 2. Изменение стилей через класс</h2>
+  <div class="card" id="card2">
+    <h3>Карточка</h3>
+    <p>Нажми кнопку, чтобы переключить состояние</p>
+  </div>
+  <button id="btn2">Переключить</button>
+
+  <h2>Задача 3. Создание элементов списка</h2>
+  <input id="input3" placeholder="Новый элемент">
+  <button id="btn3">Добавить</button>
+  <ul id="list3"></ul>
+
+  <h2>Задача 4. Удаление элементов</h2>
+  <ul id="list4"></ul>
+
+  <h2>Задача 5. Генерация каталога</h2>
+  <button id="btn5">Перерисовать каталог</button>
+  <div id="catalog5"></div>
+
+  <h2>Задача 6. Модальное окно</h2>
+  <button id="btn6">Открыть окно</button>
+  <div class="overlay" id="overlay6">
+    <div class="modal">
+      <button class="modal-close" id="close6">×</button>
+      <h3>Модальное окно</h3>
+      <p>Закрыть кликом по кнопке ×</p>
+      <p>или на затемнённый фон</p>
+    </div>
+  </div>
+
+  <h2>Задача 7. Таблица через DOM</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Имя</th>
+        <th>Email</th>
+        <th>Роль</th>
+      </tr>
+    </thead>
+    <tbody id="tbody7"></tbody>
+  </table>
+</body>
+
+<script src="logic.js"></script>
